@@ -1,0 +1,59 @@
+% http://www.ctan.org/tex-archive/macros/latex/contrib/beamer/examples
+% http://latex.artikel-namsu.de/english/beamer-examples.html
+
+%\documentclass{beamer}
+\documentclass[usenames,dvipsnames]{beamer}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{bm}
+\usepackage{fancybox, graphicx}
+\usepackage{listings}
+\usepackage{tikz} % Diagrams
+\usepackage{color}
+\usepackage{textcomp} % See https://tex.stackexchange.com/questions/145416/how-to-have-straight-single-quotes-in-lstlistings
+
+\lstset{language=bash,upquote=true} % Format listings as appropriate for bash. Inexplicably we get problems if the language is set as part of the \begin{lstlisting} command.
+
+% https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+
+
+
+\usetheme{boxes}
+\usecolortheme{beaver}
+
+
+\title{Can the World's Largest Digital Camera Answer Cosmological Questions?}
+\author{Lorne Whiteway \\ lorne.whiteway@star.ucl.ac.uk}
+\institute{Astrophysics Group \\ Department of Physics and Astronomy \\ University College London}
+\date{Presentation to the Orwell  Astronomical Society \\ 21 September 2018}
+
+\subject{IT}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Where to find this presentation}
+  \begin{block}{}
+    Find the presentation at \alert{\url{https://tinyurl.com/xxxxxx}}.\\
+  \end{block}
+  \begin{block}{}
+    On this page click on `Download' to get a copy of the presentation.
+  \end{block}
+\end{frame}
+
+
+\begin{frame}{Purpose of presentation}
+  \begin{block}{}
+    \begin{itemize}
+      \item{Foo}
+      \item{Bar}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+
+
+\end{document}
