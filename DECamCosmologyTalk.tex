@@ -17,6 +17,7 @@
 % https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
 \definecolor{light-gray}{gray}{0.95}
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
+\newcommand{\insertpicture}[3]{{\setbeamercolor{background canvas}{bg={#3}}\begin{frame}{} \begin{center}\includegraphics[{#2}]{{#1}} \end{center} \end{frame}}}
 
 
 
@@ -27,7 +28,7 @@
 \title{Can the World's Largest Digital Camera Answer Cosmological Questions?}
 \author{Lorne Whiteway \\ lorne.whiteway@star.ucl.ac.uk}
 \institute{Astrophysics Group \\ Department of Physics and Astronomy \\ University College London}
-\date{Presentation to the Orwell  Astronomical Society \\ 21 September 2018}
+\date{Presentation to the Orwell Astronomical Society \\ 21 September 2018 \\ Find the presentation at \alert{\url{https://tinyurl.com/y7w542eb}}}
 
 \subject{IT}
 
@@ -35,25 +36,72 @@
 
 \frame{\titlepage}
 
-\begin{frame}{Where to find this presentation}
-  \begin{block}{}
-    Find the presentation at \alert{\url{https://tinyurl.com/y7w542eb}}.\\
-  \end{block}
-  \begin{block}{}
-    On this page click on `Download' to get a copy of the presentation.
-  \end{block}
-\end{frame}
+\insertpicture{11-0222-13D.jpg}{angle=-90,origin=c,scale=0.3}{black}
+
+\insertpicture{11-0200-15D.jpg}{scale=0.40}{black}
 
 
-\begin{frame}{Purpose of presentation}
+\begin{frame}{Detector}
   \begin{block}{}
     \begin{itemize}
-      \item{Foo}
-      \item{Bar}
+      \item{Detector has 62 chips (`CCDs')}
+      \item{Each CCD is 3 cm by 6 cm and has $2048 x 4096 = 8 \text{ megapixels}$}
+      \item{Total of $500$ megapixels.}
+      \item{Each pixel is $15$ microns square.}
+      \item{The CCDs are unusually thick $\implies$ more infrared light captured.}
+      \item{\color{blue}{Why do we want to capture infrared light?}}
     \end{itemize}
   \end{block}
 \end{frame}
 
+\insertpicture{DECam_in_place.jpg}{scale=1.4}{black}
 
+\insertpicture{DECam-overview.png}{scale=0.75}{black}
+
+\begin{frame}{DECam}
+  \begin{block}{}
+    \begin{itemize}
+      \item{Detector is part of a camera called `DECam'.}
+      \item{Built in part at University College London.}
+      \item{Five lenses - largest is $1$m diameter.}
+      \item{Careful shutter design allows precise measurement of exposure times.}
+      \item{Five filters: green, red, and three infrared colours.}
+      %\item{\color{blue}{Why do we want to see in several different colors?}}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% Plot of total throughput for each band (includes filter, apparatus and atmosphere)
+\insertpicture{dr1_bandpass.jpg}{scale=0.27}{white}
+
+% Telescope from outside
+\insertpicture{12-0328-26D.jpg}{scale=0.35}{black}
+
+% Telescope from inside
+\insertpicture{12-0331-07D.jpg}{scale=0.20}{black}
+
+\begin{frame}{The Telescope}
+  \begin{block}{}
+    \begin{itemize}
+      \item{Camera is attached to the Victor Blanco Telescope}
+      \item{At the Cerro-Tololo Inter-American Observatory in Chile}
+      \item{4m main mirror; $10 m^2$ collecting area}
+      \item{First light 1976; largest Southern Hemisphere telescope until 1998}
+      \item{At 2200 m altitude}
+      \item{Ritchey-Chr\'etien design}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Optical system: Telescope plus camera}
+  \begin{block}{}
+    \begin{itemize}
+      \item{Camera is at prime focus.}
+      \item{f2.7}
+      \item{Field of view: 2 deg diameter; $3 deg^2$ area.}
+      \item{Pixel scale is $0.26$ arcsec/pixel (pound coin at 18 km). }
+    \end{itemize}
+  \end{block}
+\end{frame}
 
 \end{document}
