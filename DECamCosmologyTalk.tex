@@ -30,14 +30,11 @@
 \institute{Astrophysics Group \\ Department of Physics and Astronomy \\ University College London}
 \date{Presentation to the Orwell Astronomical Society \\ 21 September 2018 \\ Find the presentation at \alert{\url{https://tinyurl.com/y7w542eb}}}
 
-\subject{IT}
-
 \begin{document}
 
 \frame{\titlepage}
 
 % Blank screen, show full scale printout of focal plane.
-
 
 % From https://www.darkenergysurvey.org/multimedia/photo-gallery/
 \insertpicture{11-0222-13D.jpg}{angle=-90,origin=c,scale=0.3}{black}
@@ -51,7 +48,7 @@
     \begin{itemize}
       \item{Detector has 62 chips (`CCDs')}
       \item{Each CCD is 3 cm by 6 cm and has $2048 x 4096 = 8 \text{ megapixels}$}
-      \item{Total of $500$ megapixels.} % Explain that each pixel counts the number of photons impinging on the pixel.
+      \item{Total of $520$ megapixels.} % Explain that each pixel counts the number of photons impinging on the pixel.
       \item{Each pixel is $15$ microns square.}
       \item{The CCDs are unusually thick $\implies$ more infrared light captured.}
       \item{\color{blue}{Why do we want to capture infrared light?}}
@@ -117,6 +114,8 @@
 % Talk about star/galaxy separation and machine learning.
 % Talk about bleeding from bright objects.
 
+%TODO: More pretty pictures?
+
 \begin{frame}{Dark Energy Survey}
   \begin{block}{}
     \begin{itemize}
@@ -133,6 +132,7 @@
 \end{frame}
 
 %TODO: Picture of survey area? names of constellations?
+%TODO: How many objects?
 
 \begin{frame}{Dark Energy Survey}
   \begin{block}{}
@@ -215,12 +215,13 @@
       \item{There was a Big Bang - an initial hot and dense state - and the Universe has been expanding ever since.}
       \item{The Universe is more-or-less the same everywhere and we are not in a `special' location.}
       \item{Einstein's theory (`General Relativity') correctly describes how gravity works.}
+      \item{The overall geometry of the Universe is `flat': keep going in a straight line and you won't return home.}
     \end{itemize}
   \end{block}
 \end{frame}
 
 
-\begin{frame}{So how can we answer these comological questions?}
+\begin{frame}{So how can we answer these cosmological questions?}
   \begin{block}{}
     \begin{itemize}
       \item{One main method is to look at how `clustered' galaxies are.}
@@ -359,7 +360,7 @@
       \item{If we throw all these stange things into the range of possibilities, then we find that the best match to the observed clustering is:}
 	\item{Age of Universe = 14 billion years (as before).}
       \item{Of the 4.3 g per Jupiter volume of matter, only 0.7 g is normal matter (basically hydrogen and helium) and 3.6 g is dark.}
-      \item{As well, empty space has a mass of 9 g per Jupiter volume.}
+      \item{As well, there is an additional 9 g per Jupiter volume that is simply the mass of empty space.}
     \end{itemize}
   \end{block}
 \end{frame}
@@ -386,14 +387,42 @@
   \end{block}
 \end{frame}
 
-Further reading
+\begin{frame}{Further reading}
+  \begin{block}{}
+    \begin{itemize}
+      \item{Harrison, \textit{Cosmology}, Cambridge University Press, 2nd ed 2000. Historical cosmology and the philosophy of cosmology as well as modern theory. Non-mathematical.}
+      \item{Hawley \& Holcomb, \textit{Foundations of Modern Cosmology}, OUP, 2005. Undergraduate textbook.}
+      \item{Dodelson, \textit{Modern Cosmology}, Academic Press, 2003. Introduction to the mathematical theory; requires undergraduate physics preparation.}
+    \end{itemize}
+  \end{block}
+\end{frame}
 
-DES book
 
-DES public data
+\begin{frame}{Images are publicly available}
+  \begin{block}{}
+    \begin{itemize}
+      \item{Go to \url{http://archive.noao.edu/search/query/survey/desy1}}
+      \item{Set coordinates to (say) RA = 35, DEC = -50; Search box size = 20; choose a filter colour and check `Calibrated images'. Then `Search'.}
+      \item{On the next page click on `Retrieve'.}
+      \item{This will download a file (~ 300 Mb) that you can view with DS9.}
+    \end{itemize}
+  \end{block}
+\end{frame}
 
-Systematic errors?
+\insertpicture{NOAO_1.jpg}{scale=0.35}{white}
 
-CMB
+\insertpicture{NOAO_2.jpg}{scale=0.35}{white}
+
+\begin{frame}{Other uses of the data}
+  \begin{block}{}
+    \begin{itemize}
+      \item{The images capture everything in the sky (stars, galaxies, solar system objects, cosmic rays, airplanes, etc.)}
+      \item{Non-cosmologists are using the images e.g. to search for planet 9.}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+% TODO: Could add a slide about systematic errors.Systematic errors?
+% Could add a slide about the CMB.
 
 \end{document}
