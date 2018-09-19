@@ -43,18 +43,19 @@
 \insertpicture{11-0200-15D.jpg}{scale=0.40}{black}
 
 
-\begin{frame}{Detector}
-  \begin{block}{}
-    \begin{itemize}
-      \item{Detector has 62 chips (`CCDs')}
-      \item{Each CCD is 3 cm by 6 cm and has $2048 x 4096 = 8 \text{ megapixels}$}
-      \item{Total of $520$ megapixels.} % Explain that each pixel counts the number of photons impinging on the pixel.
-      \item{Each pixel is $15$ microns square.}
-      \item{The CCDs are unusually thick $\implies$ more infrared light captured.}
-      \item{\color{blue}{Why do we want to capture infrared light?}}
-    \end{itemize}
-  \end{block}
-\end{frame}
+% Don't show this slide - talk through this material during the preceeding pictures
+%\begin{frame}{Detector}
+%  \begin{block}{}
+%    \begin{itemize}
+%      \item{Detector has 62 chips (`CCDs')}
+%      \item{Each CCD is 3 cm by 6 cm and has $2048 x 4096 = 8 \text{ megapixels}$}
+%      \item{Total of $520$ megapixels.} % Explain that each pixel counts the number of photons impinging on the pixel.
+%      \item{Each pixel is $15$ microns square.}
+%      \item{The CCDs are unusually thick $\implies$ more infrared light captured.}
+%      \item{\color{blue}{Why do we want to capture infrared light?}}
+%    \end{itemize}
+%  \end{block}
+%\end{frame}
 
 \insertpicture{DECam_in_place.jpg}{scale=1.4}{black}
 
@@ -62,16 +63,17 @@
 % From paper `DECam Integration Tests on Telescope Simulator' http://inspirehep.net/record/946923. See also https://arxiv.org/pdf/1111.4717.pdf.
 \insertpicture{DECam-overview.png}{scale=0.75}{black}
 
-\begin{frame}{DECam}
-  \begin{block}{}
-    \begin{itemize}
-      \item{Detector is part of a camera called `DECam'.}
-      \item{Built in part at University College London.}
-      \item{Five lenses - largest is $1$m diameter.}
-      \item{Five filters: green, red, and three infrared colours.}
-    \end{itemize}
-  \end{block}
-\end{frame}
+% Don't show this slide - talk through this material during the preceeding pictures
+%\begin{frame}{DECam}
+%  \begin{block}{}
+%    \begin{itemize}
+%      \item{Detector is part of a camera called `DECam'.}
+%      \item{Built in part at University College London.}
+%      \item{Five lenses - largest is $1$m diameter.}
+%      \item{Five filters: green, red, and three infrared colours.}
+%    \end{itemize}
+%  \end{block}
+%\end{frame}
 
 % Plot of total throughput for each band (includes filter, apparatus and atmosphere)
 % From http://www.ctio.noao.edu/noao/node/13140
@@ -89,7 +91,7 @@
   \begin{block}{}
     \begin{itemize}
       \item{The DECam camera is attached to the Victor Blanco Telescope at the Cerro-Tololo Inter-American Observatory in Chile}
-      \item{4m main mirror; $10 m^2$ collecting area}
+      \item{4 m main mirror; 10 m$^2$ collecting area}
       \item{First light 1976; largest Southern Hemisphere telescope until 1998}
       \item{At 2200 m altitude}
       \item{Ritchey-Chr\'etien design}
@@ -102,53 +104,64 @@
     \begin{itemize}
       \item{The camera is at prime focus.}
       \item{f2.7}
-      \item{Field of view: 2 deg diameter; $3 deg^2$ area.}
+      \item{Field of view: 2 deg diameter; 3 deg$^2$ area.}
       \item{$0.26$ arcsec per pixel (`pixel scale'). } %$0.26$ arcsec = pound coin at 18 km
     \end{itemize}
   \end{block}
 \end{frame}
 
 % Show off smaller scale picture. Use DS9 with `Linear' and `ZScale' under scale; InvertY and 270 under Zoom; InvertColorMap under Color.
+% Scale, Scale Parameters, set min to 1.5 times proposed value and max to 5 times proposed value. Then expiriment with right mouse button.
+% Zoom: InvertY and 270 degrees.
 
-% Show off big scale picture
 % Talk about star/galaxy separation and machine learning.
 % Talk about bleeding from bright objects.
 
-%TODO: More pretty pictures?
+% Perhaps show off big scale picture?
+
+%From https://files.slack.com/files-pri/T04GF69PU-FCDLYPTHP/des0303-3540-spiral.jpg, via DES Slack beautiful-pictures post 23 August 2018.
+\insertpicture{des0303-3540-spiral.jpg}{scale=0.28}{black}
+
 
 \begin{frame}{Dark Energy Survey}
   \begin{block}{}
     \begin{itemize}
       \item{The camera is being used as part of a survey to collect information about the locations of many distant galaxies.}
-      \item{We only care about distant galaxies. Milky Way stars, comets, nearby galaxies and so on are actually bad for us (as they block our view of distant objects).} 
+      \item{Expect to see 300 million galaxies.}
       \item{We only do statistical analysis on the data - we don't actually care about the details of any one particular object.}
+    \end{itemize}
+  \end{block}
+\end{frame}
+
+\begin{frame}{Dark Energy Survey}
+  \begin{block}{}
+    \begin{itemize}
       \item{Survey lasts six years - year six is just starting.}
-      \item{Survey covers one-fifth of the entire celestial sphere.}
+      \item{Survey covers one-eighth of the celestial sphere.}
       \item{Each patch imaged ten times with each of the five filters.}
       \item{Each exposure is 90 seconds.} %500 hours per year.
-      \item{TODO: What magnitude?}
     \end{itemize}
   \end{block}
 \end{frame}
 
 %TODO: Picture of survey area? names of constellations?
-%TODO: How many objects?
 
-\begin{frame}{Dark Energy Survey}
-  \begin{block}{}
-    \begin{itemize}
-      \item{The project involves over 400 scientists at 25 institutions in 7 countries.}
-      \item{Funding is primarily from the U.S. Department of Energy.}
-      \item{U.K. institutions are UCL and the Universities of Cambridge, Edinburgh, Portsmouth, Sussex and Nottingham.}
-    \end{itemize}
-  \end{block}
-\end{frame}
+%Perhaps don't include this slide...
+%\begin{frame}{Dark Energy Survey}
+%  \begin{block}{}
+%    \begin{itemize}
+%      \item{The project involves over 400 scientists at 25 institutions in 7 countries.}
+%      \item{Funding is primarily from the U.S. Department of Energy.}
+%      \item{U.K. institutions are UCL and the Universities of Cambridge, Edinburgh, Portsmouth, Sussex and Nottingham.}
+%    \end{itemize}
+%  \end{block}
+%\end{frame}
 
 \begin{frame}{Cosmological redshift}
   \begin{block}{}
     \begin{itemize}
       \item{It's easy to measure the sky coordinates RA and DEC of each object.}
-      \item{But we also want to know how far away the object is, to place it properly in three-dimensional space.}
+      \item{But we also want to know how far away the object is, to determine its place in three-dimensional space.}
       \item{The expansion of the Universe `stretches' lightwaves, making the wavelength longer (redder). This is `cosmological redshift'.}
       \item{From the redshift we can infer the distance (more redshift $\implies$ more distant).}
     \end{itemize}
@@ -162,7 +175,7 @@
     \begin{itemize}
       \item{If we could point a spectrograph at each object, then we could precisely measure the redshift noting how much the spectral lines have shifted.}
       \item{This would take too long!}
-      \item{But we get some (very coarse) spectral information by measuring the brightness through each of the five filters.}
+      \item{But we get some (very coarse) spectral (i.e. colour) information by measuring the brightness through each of the five filters.}
       \item{From this we can get a `good enough' estimate of the redshift.}
       \item{What can go wrong: small old nearby red galaxy and large old distant blue galaxy are indistinguishable.}
     \end{itemize}
@@ -187,22 +200,22 @@
 
 \begin{frame}{Cosmological questions}
   \begin{block}{}
-    \begin{itemize}
+    \begin{enumerate}
       \item{Did the Universe have a beginning and if so old is it now?}
       \item{Is the Universe expanding and if so how fast?}
       \item{What types of matter and energy predominate in the Universe and what are their densities?}
       \item{What is the mass of the neutrino?}
-    \end{itemize}
+    \end{enumerate}
   \end{block}
 \end{frame}
 
 \begin{frame}{Cosmological questions that we don't work on}
   \begin{block}{}
-    \begin{itemize}
+    \begin{enumerate}
       \item{How big is the Universe?}
       \item{What caused the Big Bang?}
       \item{Are there other Universes?}
-    \end{itemize}
+    \end{enumerate}
     We (currently) have no tools to use to answer these questions.
   \end{block}
 \end{frame}
@@ -211,12 +224,12 @@
 \begin{frame}{First principles}
   There is strong evidence that:
   \begin{block}{}
-    \begin{itemize}
-      \item{There was a Big Bang - an initial hot and dense state - and the Universe has been expanding ever since.}
+    \begin{enumerate}
+      \item{There was a Big Bang - an initial uniformly hot and dense state - and the Universe has been expanding ever since.}
       \item{The Universe is more-or-less the same everywhere and we are not in a `special' location.}
       \item{Einstein's theory (`General Relativity') correctly describes how gravity works.}
       \item{The overall geometry of the Universe is `flat': keep going in a straight line and you won't return home.}
-    \end{itemize}
+    \end{enumerate}
   \end{block}
 \end{frame}
 
@@ -233,8 +246,9 @@
 %Pandora's Cluster. 4 billion light years.
 % http://hubblesite.org/image/3868/category/52-frontier-fields
 % Abell 2744
-% Another one is hubble3-hubblefirstfrontier_1.jpg
 \insertpicture{_STScI-gallery-1401a-480x630.jpg}{scale=0.4}{black}
+
+% If you want another picture, try hubble3-hubblefirstfrontier_1.jpg
 
 
 \begin{frame}{Clustering}
@@ -250,12 +264,12 @@
 
 \begin{frame}{So here's the plan}
   \begin{block}{}
-    \begin{itemize}
-      \item{We agree on a definition of clustering.}
+    \begin{enumerate}
+      \item{Agree on a definition of clustering.}
       \item{Theoretical astrophysicists calculate how much clustering they would expect for a range of ages and densities.}
       \item{Astronomers measure how much clustering there actually is.}
       \item{We match the results to see which age/density combination makes theory equal observation.}
-    \end{itemize}
+    \end{enumerate}
   \end{block}
 \end{frame}
 
@@ -294,13 +308,17 @@
 \begin{frame}{Exercise: You are the Cosmologist}
   \begin{block}{}
     \begin{itemize}
-      \item{You have been given some real galaxy positions as well as some random positions.}
+      \item{Some of you have been given some real galaxy positions and some of you have been given some random positions.}
       \item{Calculate how much clustering.}
       \item{Compare your results to the theoretical results.}
       \item{How old is the Universe? What is the density of matter?}
     \end{itemize}
   \end{block}
 \end{frame}
+
+% My own work...
+\insertpicture{ClusteringTables.jpg}{scale=0.55}{white}
+
 
 
 \begin{frame}{Conclusions of the exercise}
@@ -322,7 +340,7 @@
 
 
 % My own work...
-\insertpicture{ExamplePosterior.png}{scale=0.55}{white}
+\insertpicture{ExamplePosterior.png}{scale=0.65}{white}
 
 
 \begin{frame}{What types of stuff?}
@@ -404,7 +422,7 @@
       \item{Go to \url{http://archive.noao.edu/search/query/survey/desy1}}
       \item{Set coordinates to (say) RA = 35, DEC = -50; Search box size = 20; choose a filter colour and check `Calibrated images'. Then `Search'.}
       \item{On the next page click on `Retrieve'.}
-      \item{This will download a file (~ 300 Mb) that you can view with DS9.}
+      \item{This will download a file ($\sim$ 300 Mb) that you can view with DS9.}
     \end{itemize}
   \end{block}
 \end{frame}
