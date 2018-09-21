@@ -9,15 +9,47 @@
 \usepackage{fancybox, graphicx}
 \usepackage{listings}
 \usepackage{tikz} % Diagrams
+\usetikzlibrary{positioning}
 \usepackage{color}
 \usepackage{textcomp} % See https://tex.stackexchange.com/questions/145416/how-to-have-straight-single-quotes-in-lstlistings
+%\usepackage[font=small,labelfont=bf]{caption} % Required for specifying captions to tables and figures. From https://tex.stackexchange.com/questions/238636
+\usepackage[absolute,overlay]{textpos}
+
 
 \lstset{language=bash,upquote=true} % Format listings as appropriate for bash. Inexplicably we get problems if the language is set as part of the \begin{lstlisting} command.
 
 % https://tex.stackexchange.com/questions/36030/how-to-make-a-single-word-look-as-some-code
 \definecolor{light-gray}{gray}{0.95}
 \newcommand{\code}[1]{\colorbox{light-gray}{\texttt{#1}}}
-\newcommand{\insertpicture}[3]{{\setbeamercolor{background canvas}{bg={#3}}\begin{frame}{} \begin{center}\includegraphics[{#2}]{{#1}} \end{center} \end{frame}}}
+
+% Parameters: file name, graphics options (e.g. `scale=0.3'), background colour, whom to credit, x pos for credit, y pos for credit.
+\newcommand{\insertpicturewithcredit}[6]{
+{
+  \setbeamercolor{background canvas}{bg={#3}}
+  \begin{frame}{}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\includegraphics[{#2}]{{#1}}};
+        \draw ({#5},{#6}) node[white,fill=black,font=\footnotesize] {Credit: {#4}};
+      \end{tikzpicture}
+    \end{center}
+  \end{frame}
+ }
+}
+
+% Parameters: file name, graphics options (e.g. `scale=0.3'), background colour
+\newcommand{\insertpicture}[3]{
+{
+  \setbeamercolor{background canvas}{bg={#3}}
+  \begin{frame}{}
+    \begin{center}
+      \begin{tikzpicture}
+        \draw (0, 0) node[inner sep=0] {\includegraphics[{#2}]{{#1}}};
+      \end{tikzpicture}
+    \end{center}
+  \end{frame}
+ }
+}
 
 
 
@@ -37,11 +69,12 @@
 % Blank screen, ask who has digital camera, show full scale printout of focal plane. Explain how the detector works, and how many pixels it has.
 
 % From https://www.darkenergysurvey.org/multimedia/photo-gallery/
-\insertpicture{11-0222-13D.jpg}{angle=-90,origin=c,scale=0.3}{black}
+\insertpicturewithcredit{11-0222-13D.jpg}{angle=-90,origin=c,scale=0.3}{black}{Reidar Hahn, Fermilab}{-4}{-3}
+
+
 
 % From https://www.darkenergysurvey.org/multimedia/photo-gallery/
-\insertpicture{11-0200-15D.jpg}{scale=0.40}{black}
-
+\insertpicturewithcredit{11-0200-15D.jpg}{scale=0.40}{black}{Reidar Hahn, Fermilab}{-3.5}{-3.6}
 
 % Don't show this slide - talk through this material during the preceeding pictures
 %\begin{frame}{Detector}
@@ -59,11 +92,11 @@
 
 
 %http://vms.fnal.gov/stillphotos/2012/0300/12-0332-18D.jpg
-\insertpicture{12-0332-18D.jpg}{scale=0.4}{black}
+\insertpicturewithcredit{12-0332-18D.jpg}{scale=0.4}{black}{Fermilab}{-3.5}{-3.6}
 
 %Schematic diagram of DECam
 % From paper `DECam Integration Tests on Telescope Simulator' http://inspirehep.net/record/946923. See also https://arxiv.org/pdf/1111.4717.pdf.
-\insertpicture{DECam-overview.png}{scale=0.75}{black}
+\insertpicturewithcredit{DECam-overview.png}{scale=0.75}{black}{arxiv.org 1111.4717}{-3.5}{-3.6}
 
 % Don't show this slide - talk through this material during the preceeding pictures
 %\begin{frame}{DECam}
@@ -79,15 +112,15 @@
 
 % Plot of total throughput for each band (includes filter, apparatus and atmosphere)
 % From http://www.ctio.noao.edu/noao/node/13140
-\insertpicture{dr1_bandpass.jpg}{scale=0.27}{white}
+\insertpicturewithcredit{dr1_bandpass.jpg}{scale=0.27}{white}{www.ctio.noao.edu}{-3}{3.5}
 
 % Telescope from outside
 % From DES Fermilab Gallery at http://vms.fnal.gov/asset?search-term=%22dark+energy+survey%22&submit=Go&search-category%5B%5D=Photography
-\insertpicture{12-0328-26D.jpg}{scale=0.35}{black}
+\insertpicturewithcredit{12-0328-26D.jpg}{scale=0.35}{black}{Reidar Hahn, Fermilab}{-3}{-3.6}
 
 % Telescope from inside
 % From DES Fermilab Gallery at http://vms.fnal.gov/stillphotos/2012/0300/12-0331-04D.jpg
-\insertpicture{12-0331-04D.jpg}{scale=0.4}{black}
+\insertpicturewithcredit{12-0331-04D.jpg}{scale=0.4}{black}{Fermilab}{-3.5}{-3.6}
 
 \begin{frame}{The Telescope}
   \begin{block}{}
@@ -122,7 +155,7 @@
 % Perhaps show off big scale picture?
 
 %From https://files.slack.com/files-pri/T04GF69PU-FCDLYPTHP/des0303-3540-spiral.jpg, via DES Slack beautiful-pictures post 23 August 2018.
-\insertpicture{des0303-3540-spiral.jpg}{scale=0.28}{black}
+\insertpicturewithcredit{des0303-3540-spiral.jpg}{scale=0.28}{black}{Erin Sheldon, DES}{-3}{-4}
 
 
 \begin{frame}{Dark Energy Survey}
@@ -248,7 +281,7 @@
 %Pandora's Cluster. 4 billion light years.
 % http://hubblesite.org/image/3868/category/52-frontier-fields
 % Abell 2744
-\insertpicture{_STScI-gallery-1401a-480x630.jpg}{scale=0.4}{black}
+\insertpicturewithcredit{_STScI-gallery-1401a-480x630.jpg}{scale=0.4}{black}{Hubble Frontier Fields}{0}{-3.8}
 
 % If you want another picture, try hubble3-hubblefirstfrontier_1.jpg
 
@@ -278,7 +311,7 @@
 
 
 %https://www.kingsnews.org/articles/the-cocktail-party-effect
-\insertpicture{party.jpg}{scale=0.55}{black}
+\insertpicturewithcredit{party.jpg}{scale=0.55}{black}{www.kingsnews.org}{-2.5}{-3}
 
 
 \begin{frame}{Definition of clustering}
